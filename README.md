@@ -15,11 +15,13 @@ Electron is a framework for building **desktop** applications using **JavaScript
    - Node.js and npm: Install [Node.js](https://nodejs.org/en/download/) with the latest long-term support (**LTS**) version
 
 2. Building your First App
+   1. Start App
    ```node
    mkdir my-electron-app && cd my-electron-app
    npm init
    npm run start
    ```
+   2. Debugging from VS Code need to add `.vscode/launch.json` configuration
 3. Using Preload Scripts
 4. Adding Features
 5. Packaging Your Application
