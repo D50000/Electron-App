@@ -24,7 +24,8 @@ Electron is a framework for building **desktop** applications using **JavaScript
    2. Debugging from VS Code need to add `.vscode/launch.json` configuration
 3. Using Preload Scripts
    - Preload scripts are injected before a web page loads in the renderer, similar to a Chrome extension's [content scripts](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts).
-   - 
+   - Act as a secure bridge between the main process (Node.js) and the renderer process (browser environment).
+   - Securely integrating Node.js capabilities, facilitating inter-process communication, and restricting direct access to sensitive resources.
 4. Adding Features
 5. Packaging Your Application
 6. Publishing and Updating
