@@ -26,7 +26,9 @@ Electron is a framework for building **desktop** applications using **JavaScript
    - Preload scripts are injected before a web page loads in the renderer, similar to a Chrome extension's [content scripts](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts).
    - Act as a secure bridge between the main process (Node.js) and the renderer process (browser environment).
    - Securely integrating Node.js capabilities, facilitating inter-process communication, and restricting direct access to sensitive resources.
-4. Adding Features
+4. Adding Features ([Tutorial](https://www.electronjs.org/docs/latest/tutorial/examples))
+   1. Adding complexity to your renderer process' web app code
+   2. Deeper integrations with the operating system and Node.js
 5. Packaging Your Application
 6. Publishing and Updating
 
