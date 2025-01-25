@@ -6,7 +6,9 @@
   "scripts": {
     "start": "electron .",
     "debug": "electron --remote-debugging-port=9222 .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "author": "Jane Doe",
   "license": "MIT",
