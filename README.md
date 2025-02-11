@@ -30,11 +30,23 @@ Electron is a framework for building **desktop** applications using **JavaScript
    1. Adding complexity to your renderer process' web app code
    2. Deeper integrations with the operating system and Node.js
 5. Packaging Your Application  
-   **Electron Forge** is an all-in-one tool that handles the packaging and distribution of Electron apps. Under the hood, it combines a lot of existing Electron tools (e.g. [@electron/packager](https://github.com/electron/packager), [@electron/osx-sign](https://github.com/electron/osx-sign), [electron-winstaller](https://github.com/electron/windows-installer), etc.) into a single interface so you do not have to worry about wiring them all together.
+   - **Electron Forge** is an all-in-one tool that handles the packaging and distribution of Electron apps. Under the hood, it combines a lot of existing Electron tools (e.g. [@electron/packager](https://github.com/electron/packager), [@electron/osx-sign](https://github.com/electron/osx-sign), [electron-winstaller](https://github.com/electron/windows-installer), etc.) into a single interface so you do not have to worry about wiring them all together.
+
+   - Importing your project into **Forge**
    ```node
    npm install --save-dev @electron-forge/cli
    npx electron-forge import
    ```
+
+   - Creating a distributable.  
+   After the script runs, you should see an **out/make** folder containing both the distributable and a folder containing the packaged application code.
+   ```node
+   npm run make
+   ```
+
+   - **Signing Your Code**  
+   Code signing is a security technology that you use to certify that a desktop app was created by a known source. Windows and macOS have their own OS-specific(config in `forge.config.js`) code signing systems that will make it difficult for users to download or launch unsigned applications.
+
 6. Publishing and Updating
 
 #### Reference
