@@ -29,25 +29,44 @@ Electron is a framework for building **desktop** applications using **JavaScript
 4. Adding Features ([Tutorial](https://www.electronjs.org/docs/latest/tutorial/examples))
    1. Adding complexity to your renderer process' web app code
    2. Deeper integrations with the operating system and Node.js
-5. Packaging Your Application  
+5. Packaging Your Application
+
    - **Electron Forge** is an all-in-one tool that handles the packaging and distribution of Electron apps. Under the hood, it combines a lot of existing Electron tools (e.g. [@electron/packager](https://github.com/electron/packager), [@electron/osx-sign](https://github.com/electron/osx-sign), [electron-winstaller](https://github.com/electron/windows-installer), etc.) into a single interface so you do not have to worry about wiring them all together.
 
    - Importing your project into **Forge**
+
    ```node
    npm install --save-dev @electron-forge/cli
    npx electron-forge import
    ```
 
    - Creating a distributable.  
-   After the script runs, you should see an **out/make** folder containing both the distributable and a folder containing the packaged application code.
+     After the script runs, you should see an **out/make** folder containing both the distributable and a folder containing the packaged application code.
+
    ```node
    npm run make
    ```
 
    - **Signing Your Code**  
-   Code signing is a security technology that you use to certify that a desktop app was created by a known source. Windows and macOS have their own OS-specific(config in `forge.config.js`) code signing systems that will make it difficult for users to download or launch unsigned applications.
+     Code signing is a security technology that you use to certify that a desktop app was created by a known source. Windows and macOS have their own OS-specific(config in `forge.config.js`) code signing systems that will make it difficult for users to download or launch unsigned applications.
 
 6. Publishing and Updating
+
+   - Using [update.electronjs.org](https://update.electronjs.org) its requirements are:
+
+     - Your app runs on **macOS or Windows**
+     - Your app has a public **GitHub repository**
+     - Builds are published to [GitHub releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+     - Builds are [code signed](https://www.electronjs.org/docs/latest/tutorial/code-signing) (macOS only)
+
+   - Setting up the GitHub Publisher and the publisher in **forge.config.js**
+
+   ```node
+   # Installing the module
+   npm install --save-dev @electron-forge/publisher-github
+   # Running the publish in package
+   npm run publish
+   ```
 
 #### Reference
 
