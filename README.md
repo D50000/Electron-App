@@ -68,6 +68,14 @@ Electron is a framework for building **desktop** applications using **JavaScript
    npm run publish
    ```
 
+   - Instrumenting your updater code
+   ```node
+   # Electron app to download an update whenever a new release is out. Electron apps do this via the autoUpdater module, which reads from an update server feed to check if a new version is available for download.
+   npm install update-electron-app
+   # Then, import the module and call it immediately in the main process.
+   ```
+
+
 #### Reference
 
 - https://www.electronjs.org/
