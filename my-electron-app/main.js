@@ -1,3 +1,5 @@
+require('update-electron-app')() // autoUpdater module
+
 const { app, BrowserWindow } = require("electron/main");
 // Electron follows typical JavaScript conventions here, where PascalCase modules are instantiable class constructors (e.g. BrowserWindow, Tray, Notification)
 // whereas camelCase modules are not instantiable (e.g. app, ipcRenderer, webContents).
